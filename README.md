@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+# Magkano Utang Ko? - Modern Shared Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Magkano Utang Ko App Home Screenshot](./gh-assets/MUKASapp.png)
+![Expense calculation page Screenshot](./gh-assets/MUKASapp2.png)
 
-Currently, two official plugins are available:
+A sleek, modern, and user-friendly frontend application designed to solve a common real-life problem: tracking shared expenses for group events. Whether it's a vacation, a night out with friends, or a simple group dinner, this app eliminates the confusion around "who owes what" by automating all the calculations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built from the ground up using a modern frontend stack, focusing on best practices, scalability, and a great developer experience. 
+Note: Intended to practice React and other libraries.
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack & Tools
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project utilizes a modern, robust, and popular set of tools to build a high-quality frontend application.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Technology         | Description                                        |
+| ------------------ | -------------------------------------------------- |
+| **React**          | A JavaScript library for building user interfaces. |
+| **TypeScript**     | Static typing for robust, error-free components.   |
+| **Redux Toolkit**  | The official, opinionated toolset for Redux state management. |
+| **React Router**   | For client-side routing and page navigation.       |
+| **Tailwind CSS**   | A utility-first CSS framework for rapid UI development. |
+| **Formik**         | The world's most popular open source form library for React. |
+| **Yup**            | A JavaScript schema builder for value parsing and validation. |
+| **React Toastify** | For providing elegant and customizable toast notifications. |
+| **UUID**           | For generating unique IDs for participants and expenses. |
+| **Create React App** | For project scaffolding and development server. |
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To get a local copy up and running, follow these simple steps.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Make sure you have Node.js and npm (or yarn) installed on your machine.
+*   [Node.js](https://nodejs.org/) (which includes npm)
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```sh
+    cd your-repo-name
+    ```
+
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+
+4.  **Run the development server:**
+    ```sh
+    npm start
+    ```
+    The application will now be running on `http://localhost:3000` (or another port if 3000 is busy).
+
+---
