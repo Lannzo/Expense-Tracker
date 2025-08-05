@@ -1,23 +1,23 @@
 import { useMemo } from 'react';
 import { useAppSelector } from '../app/hooks';
 
-const ExpenseSummary = () => {
-  const { participants, expenses } = useAppSelector((state) => state.event);
+const ExpenseSummary = () => { 
+  const { participants, expenses } = useAppSelector((state) => state.event); // Get participants and expenses from the Redux store
 
-  const { balances, totalSpent } = useMemo(() => {
-    const balances: { [key: string]: number } = {};
-    let totalSpent = 0;
+  const { balances, totalSpent } = useMemo(() => { // Calculate balances and total spent using useMemo for performance optimization
+    const balances: { [key: string]: number } = {}; // Initialize balances object
+    let totalSpent = 0; 
 
-    participants.forEach(p => {
+    participants.forEach(p => { // Initialize each participant's balance to zero
       balances[p.id] = 0;
     });
 
-    expenses.forEach(expense => {
+    expenses.forEach(expense => { // Iterate through each expense to calculate balances
       totalSpent += expense.amount;
       const amountPerPerson = expense.amount / expense.sharedBy.length;
       
       // The person who paid gets the full amount credited to their balance
-      balances[expense.paidBy] += expense.amount;
+      balances[expense.paidBy] += expense.amount; 
 
       // Each person who shared the expense gets their share debited
       expense.sharedBy.forEach(participantId => {

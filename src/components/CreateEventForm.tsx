@@ -1,4 +1,3 @@
-import React from 'react';
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useAppDispatch } from '../app/hooks';
@@ -18,8 +17,8 @@ const validationSchema = Yup.object().shape({
 });
 
 const CreateEventForm = () => {
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  const dispatch = useAppDispatch(); // Use the dispatch hook to access the Redux store
+  const navigate = useNavigate(); // Use the navigate hook for navigation
 
   return (
     <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -64,9 +63,8 @@ const CreateEventForm = () => {
                         >
                           X
                         </button>
-                      </div>
-                      {/* FIX: Added ErrorMessage for each participant input */}
-                      <ErrorMessage
+                      </div> 
+                      <ErrorMessage // Display error for each participant for empty names
                         name={`participants.${index}.name`}
                         component="div"
                         className="text-red-500 text-sm mt-1"
@@ -74,8 +72,7 @@ const CreateEventForm = () => {
                     </div>
                   ))}
                   
-                  {/* FIX: Display array-level errors (like min length) as a string */}
-                  {typeof errors.participants === 'string' ? (
+                  {typeof errors.participants === 'string' ? ( // Display error if no participants are added
                       <div className="text-red-500 text-sm mt-1">{errors.participants}</div>
                   ) : null}
 

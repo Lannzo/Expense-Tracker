@@ -3,7 +3,7 @@ export interface Participant {
   name: string;
 }
 
-export interface Expense {
+export interface Expense { // Define the structure of an expense
   id: string;
   description: string;
   amount: number;
@@ -11,7 +11,7 @@ export interface Expense {
   sharedBy: string[]; // Array of Participant IDs
 }
 
-export interface EventState {
+export interface EventState { // Define the structure of the event state
   name: string;
   date: string;
   participants: Participant[];

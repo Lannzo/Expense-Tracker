@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import { useNavigate } from 'react-router-dom';
 import AddExpenseForm from '../components/AddExpenseForm';

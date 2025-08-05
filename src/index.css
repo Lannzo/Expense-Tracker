@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-   @apply bg-base-200 text-text-default font-sans;
+body { 
+   background-color: var(--tw-bg-base-200, #f1f5f9);
+   color: var(--tw-text-text-default, #1e293b);
+   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
