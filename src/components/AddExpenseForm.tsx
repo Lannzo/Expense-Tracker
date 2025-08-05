@@ -64,7 +64,7 @@ const AddExpenseForm = () => { // Access the Redux store to get participants and
                                 </label>
                             ))}
                         </div>
-                        <ErrorMessage name="sharedBy" component="div" className="text-red-500 text-sm mt-1"/> // Display error if no participants are selected
+                        <ErrorMessage name="sharedBy" component="div" className="text-red-500 text-sm mt-1"/> 
                     </div>
                     <button type="submit" disabled={isSubmitting} className="w-full bg-secondary hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg">
                         Add Expense
